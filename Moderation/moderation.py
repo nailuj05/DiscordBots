@@ -72,15 +72,11 @@ async def unban(ctx, *, member):
 # command_userinfo
 @bot.command(name='userinfo', help='userinfo')
 async def userinfo(ctx, member: discord.Member):
-    #   await ctx.send(arg)
-    #   await ctx.send({member.mention})
-    # await ctx.send(format({member.mention}))
     roles = [role for role in member.roles]
     embed = discord.Embed(title=f'Userinfo for {member.display_name}', color=member.color,
                           timestamp=ctx.message.created_at)
     embed.set_thumbnail(url=member.avatar_url)
     embed.set_footer(text=f'Requested by {ctx.author}.', icon_url=ctx.author.avatar_url)
-    #    embed.set_author(name=f'User Information - {member}')
     embed.add_field(name='Joined server:', value=member.joined_at.strftime('%d/%m/%Y, %H:%M:%S'),
                     inline=True)
     embed.add_field(name='Joined Discord:', value=member.created_at.strftime('%d/%m/%Y, %H:%M:%S'),
