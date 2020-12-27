@@ -143,4 +143,4 @@ def WinCheckBoard(board):
     return 'N'
 
 
-bot.run('NzkyNTA3Nzk5OTg4NjAwODQ1.X-euZw.Rn28RCWWBZUo4uTgoekq_l-Xlrk')
+bot.run('TOKEN')
